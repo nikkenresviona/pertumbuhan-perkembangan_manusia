@@ -1,0 +1,25 @@
+{
+  "rules": {
+    "rooms": {
+      "$roomCode": {
+        "meta": {
+          ".read": true,
+          ".write": "auth != null && auth.token.email === 'guru@sekolah.sch.id'"
+        },
+        "students": {
+          ".read": "auth != null && auth.token.email === 'guru@sekolah.sch.id'",
+          ".write": "auth != null && auth.token.email === 'guru@sekolah.sch.id'",
+          "$studentId": {
+            ".write": "auth != null && auth.uid === $studentId"
+          }
+        },
+        "leaderboard": {
+          ".read": "auth != null",
+          "$studentId": {
+            ".write": "auth != null && auth.uid === $studentId"
+          }
+        }
+      }
+    }
+  }
+}
