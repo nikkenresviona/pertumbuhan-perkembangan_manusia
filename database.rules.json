@@ -4,11 +4,11 @@
       "$roomCode": {
         "meta": {
           ".read": true,
-          ".write": "auth != null && auth.token.email === 'guru@sekolah.sch.id'"
+          ".write": "auth != null && auth.token.email === 'nikkenresviona26@guru.smp.belajar.id'"
         },
         "students": {
-          ".read": "auth != null && auth.token.email === 'guru@sekolah.sch.id'",
-          ".write": "auth != null && auth.token.email === 'guru@sekolah.sch.id'",
+          ".read": "auth != null && auth.token.email === 'nikkenresviona26@guru.smp.belajar.id'",
+          ".write": "auth != null && auth.token.email === 'nikkenresviona26@guru.smp.belajar.id'",
           "$studentId": {
             ".write": "auth != null && auth.uid === $studentId"
           }
